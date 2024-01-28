@@ -1,0 +1,178 @@
+        -:    0:Source:sample.c
+        -:    0:Graph:sample.gcno
+        -:    0:Data:sample.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:/* Example program for time profiling. */
+        -:    2:
+        -:    3:#include <stdbool.h>
+        -:    4:#include <stdio.h>
+        -:    5:#include <stdlib.h>
+        -:    6:
+        -:    7:struct AList {
+        -:    8:	int first;
+        -:    9:	struct AList *rest;
+        -:   10:};
+        -:   11:
+        -:   12:typedef struct AList *List;
+        -:   13:
+        -:   14:List data;
+        -:   15:
+        -:   16:List
+       10:   17:make_empty(void)
+        -:   18:{
+        -:   19:
+       10:   20:	return (NULL);
+        -:   21:}
+        -:   22:
+        -:   23:List
+ 70771395:   24:make_nonempty(int first, List rest)
+        -:   25:{
+        -:   26:	List list;
+        -:   27:
+ 70771395:   28:	list = malloc(sizeof(struct AList));
+ 70771395:   29:	if (list == NULL) {
+    #####:   30:		fprintf(stderr, "Couldn't allocate list element.\n");
+    #####:   31:		exit(1);
+        -:   32:	}
+ 70771395:   33:	list->first = first;
+ 70771395:   34:	list->rest = rest;
+ 70771395:   35:	return (list);
+        -:   36:}
+        -:   37:
+        -:   38:bool
+ 70818624:   39:is_empty(List list)
+        -:   40:{
+        -:   41:
+ 70818624:   42:	return (list == NULL);
+        -:   43:}
+        -:   44:
+        -:   45:List
+    23610:   46:make_list_helper(unsigned int size, List accum)
+        -:   47:{
+        -:   48:
+    23610:   49:	if (size == 1)
+        6:   50:		return (make_nonempty(size, accum));
+        -:   51:	else
+    23604:   52:		return (make_list_helper(size - 1, make_nonempty(size, accum)));
+        -:   53:}
+        -:   54:
+        -:   55:List
+        6:   56:make_list(unsigned int size)
+        -:   57:{
+        -:   58:
+        6:   59:	return (make_list_helper(size, make_empty()));
+        -:   60:}
+        -:   61:
+        -:   62:List
+   106406:   63:append_lists(List list1, List list2)
+        -:   64:{
+        -:   65:	List return_list;
+        -:   66:    
+   106406:   67:	if (is_empty(list1))
+        6:   68:		return (list2);
+        -:   69:	else {
+   106400:   70:		return_list = make_nonempty(list1->first,
+        -:   71:		    append_lists(list1->rest, list2));
+   106400:   72:		free(list1);
+   106400:   73:		return (return_list);
+        -:   74:	}
+        -:   75:}
+        -:   76:
+        -:   77:unsigned int
+        7:   78:get_num(void)
+        -:   79:{
+        -:   80:	unsigned int n;
+        -:   81:
+        7:   82:	scanf("%u", &n);
+        7:   83:	return (n);
+        -:   84:}
+        -:   85:
+        -:   86:/* Do interesting stuff to get some data. */
+        -:   87:void
+        1:   88:get_data(void)
+        -:   89:{
+        -:   90:	unsigned int size;
+        -:   91:    
+        1:   92:	data = make_empty();
+        -:   93:
+        1:   94:	printf("To create some data, enter a sequence of positive numbers.\n");
+        1:   95:	printf("Terminate the list with a zero.\n");
+        1:   96:	printf("Use at least moderately large numbers to create enough data "
+        -:   97:	    "for good profiling.\n");
+        1:   98:        printf("(However, you can run out of memory if you use numbers that "
+        -:   99:            "are too large.)\n");
+        8:  100:	while ((size = get_num()) != 0)
+        6:  101:		data = append_lists(data, make_list(size));
+        1:  102:}
+        -:  103:
+        -:  104:List
+ 70641385:  105:insert_list(int n, List list)
+        -:  106:{
+        -:  107:	List return_list;
+        -:  108:    
+ 70641385:  109:	if (is_empty(list))
+        3:  110:		return (make_nonempty(n, make_empty()));
+ 70641382:  111:	else if (n <= list->first)
+    23607:  112:		return (make_nonempty(n, list));
+        -:  113:	else {
+ 70617775:  114:		return_list = make_nonempty(list->first,
+        -:  115:		    insert_list(n, list->rest));
+ 70617775:  116:		free(list);
+ 70617775:  117:		return (return_list);
+        -:  118:	}
+        -:  119:}
+        -:  120:
+        -:  121:List
+    23611:  122:sort_list(List list)
+        -:  123:{
+        -:  124:	List return_list;
+        -:  125:    
+    23611:  126:	if (is_empty(list))
+        1:  127:		return (list);
+        -:  128:	else {
+    23610:  129:		return_list = insert_list(list->first, sort_list(list->rest));
+    23610:  130:		free(list);
+    23610:  131:		return (return_list);
+        -:  132:	}
+        -:  133:}
+        -:  134:
+        -:  135:void
+        1:  136:sort_data(void)
+        -:  137:{
+        -:  138:
+        1:  139:	data = sort_list(data);
+        1:  140:}
+        -:  141:
+        -:  142:void
+    47222:  143:print_list(List list)
+        -:  144:{
+        -:  145:
+    47222:  146:	if (is_empty(list))
+        2:  147:		printf("\n");
+        -:  148:	else {
+    47220:  149:		printf("%d ", list->first);
+    47220:  150:		print_list(list->rest);
+        -:  151:	}
+    47222:  152:}
+        -:  153:
+        -:  154:/* Print out whatever data we have. */
+        -:  155:void
+        2:  156:print_data(void)
+        -:  157:{
+        -:  158:
+        2:  159:	printf("The data:\n");
+        2:  160:	print_list(data);
+        2:  161:}
+        -:  162:
+        -:  163:int
+        1:  164:main(void)
+        -:  165:{
+        -:  166:
+        1:  167:	get_data();
+        1:  168:	print_data();
+        -:  169:	/* Do something interesting on the data. */
+        1:  170:	sort_data();
+        1:  171:	print_data();
+        1:  172:	return (0);
+        -:  173:}
