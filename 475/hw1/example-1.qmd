@@ -1,0 +1,166 @@
+---
+title: Homework Assignment 1
+author: John Leonard
+date: last-modified
+format:
+  html:
+    html-math-method: katex
+    smooth-scroll: true
+    embed-resources: true
+--- 
+
+Welcome to homework assignment 1!  For most homework assignments in this class, you'll be submitting quarto-generated HTML reports documenting your work.
+
+For this assignment, you'll be documenting that you installed the necessary software by embedding a screen shot of your terminal window, showing the appropriate versions of the software.
+
+You'll also be embedding URLs taken from several web sites that we'll be using as part of our exploration of user interface design this semester.
+
+# Software Installation
+
+Yes, I installed the necessary software.  Below is a screen shot showing the versions of the software that I've got running on my machine.  These programs are all on the PATH and can all be run from the command line, too!
+
+![](assets/cmsc475-sp2024-hw1-versions.png)
+
+**Instructions***: *Your job is to modify the [markdown image link](https://quarto.org/docs/authoring/markdown-basics.html#links-images) above with an image that you create.  I generally store images in an *assets* fomder directly under the folder containing my main report folders.*
+
+# Setting up accounts
+
+As part of homework assignment 1, you'll also need to create a few accounts.
+
+As part of this homework assignment, you'll be embedding URLs to demonstrate that you've got your accounts!.
+
+## P5JS
+
+P5.js is a JavaScript library that simplifies creative coding and interactive visual design. It provides a framework for teaching UI design by enabling students to easily create and manipulate graphics, animations, and interactive elements within web applications. With its intuitive syntax and built-in drawing functions, P5.js empowers learners to experiment with user interface concepts, fostering a hands-on approach to understanding UI design principles and techniques.
+
+The first two modules of the course will leverage the [P5JS](https://p5js.org/) framework.  To get started, you'll need to visit the site and [create an account](https://editor.p5js.org/signup).
+
+Once you create your account, experiment around until you create an image that looks like the one below.
+
+```{=html}
+<center>
+<iframe
+src="https://editor.p5js.org/jleonard99/full/czZsouwoG"
+width=400
+height=250
+data-external="1"
+></iframe>
+</center>
+```
+
+**Instructions:** Your job is to modify the *src* tag above with a screen that reflects that you created your account and modified the code with your name.
+
+## Helper code and notes
+
+Below is a screen that contains the necessary code to create your image from above.  Feel free to copy this code and modify it to your hearts content!
+
+To get started, hit the *play* button in the iframe below to run the javascript.
+
+Change the script to show *your* name, and the *date*.
+
+```{=html}
+<center>
+<iframe
+src="https://editor.p5js.org/jleonard99/full/czZsouwoG"
+width=400
+height=250
+data-external="1"
+></iframe>
+</center>
+```
+
+1. Be sure to *Save* your code file.  The default name is fine.
+2. Once saved, a "share" option will appear in the *file* menu.  Select share and drop the full screen URL into the *src* of the *iframe* above.
+
+![](assets/cmsc475-sp2024-hw1-p5js-share.png){width=50% fig-align="center"}
+
+## EXPO and snacks
+
+Expo.dev is a platform and set of tools that simplifies mobile app development, making it an excellent choice for teaching UI design and app creation. It offers the Snack editor, a web-based development environment, which allows learners to build, test, and preview mobile app interfaces directly in their browsers. With Expo.dev's user-friendly interface and instant feedback, students can quickly grasp UI design concepts and see their creations come to life on both iOS and Android devices, making it an ideal resource for educational purposes.
+
+The Snack Editor of Expo is a web-based development tool that simplifies the process of building and testing mobile app interfaces. It provides an interactive coding environment where users can write and experiment with React Native code for creating user interfaces. With its real-time preview feature, the Snack Editor allows students and developers to instantly visualize their UI designs on both iOS and Android devices, making it a valuable tool for learning and prototyping in the field of mobile app development.
+
+Below, you need to 
+
+:::: {.columns}
+::: {.column}
+<iframe 
+src="https://appetize.io/embed/xc1w6f1krd589zhp22a0mgftyw?autoplay=false&debug=true&device=pixel4&deviceColor=white&embed=true&launchUrl=exp%3A%2F%2Fexp.host%2F%40huynhh4%2Fgrounded-orange-candies%2BOtRSJAoE9a&orientation=portrait&scale=80&screenOnly=false&xDocMsg=true&xdocMsg=true&params=%7B%22EXDevMenuDisableAutoLaunch%22%3Atrue%2C%22EXKernelLaunchUrlDefaultsKey%22%3A%22exp%3A%2F%2Fexp.host%2F%40huynhh4%2Fgrounded-orange-candies%2BOtRSJAoE9a%22%2C%22EXKernelDisableNuxDefaultsKey%22%3Atrue%7D" 
+width="100%" 
+height="700" 
+frameborder="0" 
+scrolling="no"
+data-external="1"
+></iframe>
+:::
+::: {.column}
+<iframe 
+src="https://appetize.io/embed/8bnmakzrptf1hv9dq7v7bnteem?autoplay=false&debug=true&device=iphone12&deviceColor=black&embed=true&orientation=portrait&scale=72&screenOnly=false&xDocMsg=true&xdocMsg=true&params=%7B%22EXDevMenuDisableAutoLaunch%22%3Atrue%2C%22EXKernelLaunchUrlDefaultsKey%22%3A%22exp%3A%2F%2Fexp.host%2F%40jleonard99%2Ffascinated-orange-pizza%2BQb5s74CGy_%22%2C%22EXKernelDisableNuxDefaultsKey%22%3Atrue%7D" 
+width="100%" 
+height="700" 
+frameborder="0" 
+scrolling="no"
+data-external="1"
+>
+</iframe>
+:::
+::::
+
+# Additional examples
+
+The following sections provide additional examples for reference.  You don't need to do anything with them, except enjoy.  You'll be creating similar work products over the semester.
+
+## A more complicated expo application
+
+::: {.html}
+<div data-snack-id="@huynhh4/grounded-orange-candies" data-snack-platform="web" data-snack-preview="true" data-snack-theme="dark" style="overflow:hidden;background:#0C0D0E;border:1px solid var(--color-border);border-radius:4px;height:750px;width:100%"></div>
+:::
+
+<script 
+data-external="1"
+async src="https://snack.expo.dev/embed.js"
+></script>
+
+## An example wire-frame of a UI design
+
+This image was created in Figma, saved as PNG and
+embedded in this document.
+
+![](assets/cmsc475-sp2024-hw1-wireframe.png)
+
+## A FIGMA mockup
+
+The image below was created in Figma, and them embedded
+directly into this document.
+
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="800" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FLpE2TUM1Vzlc6thlM9xqXa%2FKitchen-Wizard%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3Dl6VlvY6iE6Krw2jz-1" allowfullscreen
+data-external="1"
+></iframe>
+
+## A FIGMA clickable prototype
+
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FLpE2TUM1Vzlc6thlM9xqXa%2FKitchen-Wizard%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D2-150%26viewport%3D254%252C309%252C0.11%26t%3DPfB0MH5dssEmvh9H-1%26scaling%3Dscale-down%26starting-point-node-id%3D2%253A150%26mode%3Ddesign" allowfullscreen
+data-external="1"
+></iframe>
+
+## Additional P5JS examples
+
+
+### Example 1
+
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="1000" src="https://editor.p5js.org/Huyenhuynhh/full/nUikKfnNY"
+data-external="1"
+></iframe>
+
+### Example 2
+
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="700" src="https://editor.p5js.org/Huyenhuynhh/full/BTVmKTdkC"
+data-external="1"
+></iframe>
+
+### Example 3
+
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="500" src="https://editor.p5js.org/jleonard99/full/_UYsCbxro"
+data-external="1"
+></iframe>
+

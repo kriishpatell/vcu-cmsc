@@ -1,0 +1,64 @@
+---
+title: Homework Assignment 2
+author: Krish Patel
+date: 1/28/2024
+format:
+  html:
+    html-math-method: katex
+    smooth-scroll: true
+    embed-resources: true
+    resource-path: [./assets]
+---
+
+* [LINK to GITHUB](https://github.com/cmsc-vcu/cmsc475-sp2024-hw2-kriishpatell)
+* [LINK to FIGMA SHARE](https://www.figma.com/file/ZxkZHAHIcAlkK1VoB296Nc/HW2?type=design&node-id=16%3A142&mode=design&t=xCLbu4RsOa3kjJhI-1)
+
+## Board 1 - Contact Information
+
+![](frame-1.png)
+
+This is my calling card with my contact information, my major, and graduation date. I utilized green because it is my favorite color, and used serif style font give it that old school flair. 
+
+I would probably want to have changing colors, maybe transition to a lavendar color palette. 
+
+## Board 2 - Connection
+
+My first theme is *connection*.  Below is my storyboard.
+
+![](frame-2.png)
+
+I selected *connection* because I have been through a lot of life changing experiences and I learned that it is better to love than hate. One of the main experiences that I've had was watching Interstellar, which I think transitions nicely into my next card. 
+
+This could possibly be animated with a rotating earth. 
+
+## Board 3 - Curiosity
+
+This theme is *curiosity*.
+
+![](frame-3.png)
+
+I selected *curiosity* because I have always been curious about a lot of things, but astronomy has always highly piqued my interest. I often found myself researching astrophysics just for fun, not entirely grasping the concepts but just enjoying the facts. 
+
+I plan to animate this with the rocket ship flying across the panel
+
+## Board 4 - Passion
+
+This theme is *passion*.
+
+![](frame-4.png)
+
+I selected *passion* because I love volleyball. It introduced me to so many new people and new things and just a very welcoming community. I also very much enjoy the sport and hope to get better every day. 
+
+Although ambitious, I think that I would want to animate the hitter spiking the ball. 
+
+## Board 5 - Closing panel
+
+![](frame-5.png)
+
+Just want to thank the viewer for taking the time to learn more about me. The previous panels were some of the words that I think truly define who I am. 
+
+I want to animate the three words bouncing in from the top like a PowerPoint animation
+
+# Reflection
+
+It was alright, I was a little confused by the instructions and was not entirely sure what was exactly required. I would ask for clarification sooner next time. 
